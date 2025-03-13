@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./course.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +16,11 @@
     <link href="https://db.onlinewebfonts.com/c/3ed1693da2d7d3c28d28b79a8a1a6b0e?family=Cygre" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/5f3589e3d4b854aada3b2b1548d15cb4?family=Actay" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./course.css">
 </head>
 
 <body>
@@ -107,7 +106,7 @@
                         </div>
                     </div>
                     <div class="card__price_btns">
-                        <button class="card__price_btns_btn">Подробнее</button>
+                        <button id="toggleBtn" class="card__price_btns_btn">Подробнее</button>
                         <button class="card__price_btns_btn notActive_btn">Записаться</button>
                     </div>
                 </div>
@@ -273,9 +272,34 @@
         </footer>
     </div>
 
+    <div id="popup" class="popup">
+        <button class="popup_btn" id="closeBtn"><img class="popup_btn_img" src="../img/x.png" alt="X"></button>
+        <div class="popup_row">
+            <div class="popup_row_t">
+                <h1 class="popup_row_t_title">Front-end разработчик кто это и чем занимается?</h1>
+                <p class="popup_row_t_p">Front-end разработчик – это специалист, который отвечает за создание пользовательского интерфейса (UI) веб-сайтов и веб-приложений. Он делает так, чтобы сайт выглядел привлекательно, работал быстро и был удобным в использовании.</p>
+            </div>
+            <div class="popup_row_img">
+                <img src="../img/popup/img.png" alt="logo">
+            </div>
+        </div>
 
+        <div class="popup_row_tech">
+            <h1 class="popup_row_h">Основные технологии Front-end разработки</h1>
+            <p class="popup_row_p">HTML (HyperText Markup Language) <br> Основной язык разметки, который определяет структуру веб-страницы. <br> Позволяет задавать заголовки, абзацы, изображения, ссылки и другие элементы</p>
+        </div>
 
+        <div class="popup_row_css">
+            <h1 class="popup_row_h">CSS (Cascading Style Sheets)</h1>
+            <p class="popup_row_p"> Отвечает за внешний вид сайта. <br> Позволяет стилизовать элементы (цвета, шрифты, анимации, отступы и т. д.). <br> CSS-фреймворки: Bootstrap, Tailwind CSS.</p>
+        </div>
 
+        <div class="popup_row_js">
+            <h1 class="popup_row_h">JavaScript (JS)</h1>
+            <p class="popup_row_p">Язык программирования, который делает сайт динамичным и интерактивным. <br> Используется для создания анимаций, слайдеров, форм, кнопок, модальных окон. <br> JS-библиотеки и фреймворки: React, Vue.js, Angular.</p>
+        </div>
+
+    </div>
 
     <script src="./course.js"></script>
 </body>

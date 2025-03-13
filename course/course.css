@@ -1309,6 +1309,7 @@ html {
     width: 1920px;
     display: flex;
     justify-content: center;
+    z-index: -1;
 }
 
 .footer__row {
@@ -1617,5 +1618,155 @@ html {
     100%{
         bottom: 1px;
         left: -760px;
+    }
+}
+
+.popup{
+    width: 1920px;
+    height: 1650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #000000;
+    border-radius: 50px;
+    padding: 0 80px;
+    background-color: #FFFFFF;
+    position: fixed;
+    bottom: -19000px;
+    transition: bottom 0.2s linear;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popup.half-show {
+    position: fixed;
+    bottom: -100%; /* Половина блока видна */
+}
+
+.popup.visible {
+    position: fixed;
+    bottom: 500000px; /* Максимальный подъем */
+}
+
+.popup_btn{
+    width: 70px;
+    height: 70px;
+    background-color: #05C17B;
+    border: 2px solid #FFFFFF;
+    border-radius: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 1690px; 
+    z-index: 10000;
+}
+
+.popup_row{
+    width: 1760px;
+    height: 474px;
+    display: flex;
+    background-color: #D6D2CF;
+    border-radius: 30px;
+    gap: 250px;
+}
+
+.popup_row_img{
+    margin-top: 16px;
+}
+
+.popup_row_h{
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.popup_row_p{
+    font-family: 'Gotham Pro';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0%;
+}
+
+.popup_row_t_title{
+    width: 1000px;
+    height: 153px;
+    font-family: 'Exo 2';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 30px 0 80px 30px;
+}
+
+.popup_row_t_p{
+    width: 1170px;
+    height: 144px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000CC;
+    margin: 0 0 67px 30px;
+}
+
+.popup_btn_img{
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+}
+
+.popup_row_tech{
+    width: 1137px;
+    height: 220px;
+    margin-top: 30px;
+    margin-bottom: 110px;
+}
+
+.popup_row_css{
+    width: 1137px;
+    height: 176px;
+    margin-top: 30px;
+    margin-bottom: 110px;
+}
+
+.popup_row_js{
+    width: 1137px;
+    height: 215px;
+}
+
+@media screen and (max-width:1400px) {
+    .container{
+        min-width: 1140px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container{
+        min-width: 960px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .container{
+        min-width: 720px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        min-width: 540px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .container{
+        min-width: 100%;
+        padding: 0 10px;
     }
 }
