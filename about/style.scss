@@ -1,0 +1,924 @@
+@font-face {
+	font-family: 'Exo 2';
+	src: url(./fonts/Exo_2/static/Exo2-Bold.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Exo 2';
+	src: url(./fonts/Exo_2/static/Exo2-Medium.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url(./fonts/helvetica-neue-5/HelveticaNeueRoman.otf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url(./fonts/helvetica-neue-5/HelveticaNeueBold.otf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url(./fonts/Gotham_Pro/gothampro_light.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url(./fonts/Gotham_Pro/gothampro_bold.ttf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'SF Pro Text';
+	src: url(./fonts/SanFranciscoProText/SFProText-Regular.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'SF Pro Text';
+	src: url(./fonts/SanFranciscoProText/SFProText-Light.ttf);
+	font-weight: 300;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+$dark: #000;
+$light: #fff;
+$dark-gray: #444444;
+$dark-green: #05c17b;
+$light-gray: #f5f5f5;
+$light-green: #b4edd8;
+
+main {
+	padding: 40px 80px;
+	margin-inline: auto;
+	min-width: 300px;
+	max-width: 1920px;
+
+	.hero-con {
+		padding: 32px;
+		height: 900px;
+		flex-shrink: 0;
+		border-radius: 50px;
+		background: $dark-gray;
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
+		// justify-content: center;
+		position: relative;
+
+		.header {
+			width: 100%;
+			padding-inline: 30px;
+			min-height: 50px;
+			max-height: 100px;
+			border-radius: 60px;
+			background: $light;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			.logo {
+				width: 163px;
+				height: 66px;
+			}
+
+			.nav ul {
+				display: flex;
+				flex-direction: row;
+				height: 20px;
+				align-items: center;
+				gap: 80px;
+				justify-content: space-between;
+				list-style-type: none;
+
+				li a {
+					color: $dark;
+					font-family: 'Helvetica Neue';
+					font-size: 18px;
+					font-weight: 400;
+					text-decoration: none;
+				}
+			}
+
+			.sign-btn {
+				width: 150px;
+				height: 45px;
+				padding: 12px 30px;
+				border-radius: 30px;
+				background: $dark-green;
+				border: none;
+				color: #fff;
+				font-family: 'Exo 2';
+				font-size: 18px;
+				font-weight: 500;
+			}
+		}
+
+		.title {
+			margin-top: 100px;
+			max-width: 900px;
+			text-align: start;
+			color: $light;
+			font-family: 'Helvetica Neue';
+			font-size: 60px;
+			font-weight: 600;
+			line-height: 100%;
+			.dspnone-1,
+			.dspnone-2 {
+				display: none;
+			}
+		}
+
+		.text {
+			margin-top: 90px;
+			width: 1063px;
+			color: $light;
+			font-family: 'Gotham Pro';
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 33px; /* 137.5% */
+		}
+	}
+	.about-us {
+		margin-top: 150px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.title {
+			color: $dark-green;
+			font-family: 'Exo 2';
+			font-size: 60px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		.info {
+			display: flex;
+			height: 450px;
+			padding: 0px 48px;
+			align-items: center;
+			// gap: 10px;
+			border-radius: 20px;
+			background: #b4edd8;
+
+			.info-text {
+				max-width: 947px;
+				color: #000;
+				font-family: 'Gotham Pro';
+				font-size: 34px;
+				line-height: 33px;
+			}
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			justify-content: space-between;
+
+			.col-6 {
+				border-radius: 20px;
+				height: 450px;
+				width: 50%;
+
+				img {
+					border-radius: 20px;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+
+			.card {
+				display: flex;
+				height: 450px;
+				padding: 50px 44px;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 25px;
+				border-radius: 20px;
+				background: $light-gray;
+
+				.subtitle {
+					max-width: 288px;
+					color: #000;
+					font-family: 'Gotham Pro';
+					font-size: 34px;
+					font-weight: 700;
+					line-height: 100%;
+				}
+
+				.training {
+					max-width: 649px;
+					color: #000;
+					font-family: 'SF Pro Text';
+					font-size: 24px;
+					font-weight: 400;
+					line-height: 100%;
+				}
+			}
+		}
+		.reverse {
+			display: flex;
+			flex-direction: row-reverse;
+			.card {
+				background-color: $light-green;
+			}
+		}
+	}
+}
+
+.footer {
+	margin-top: 140px;
+	padding: 40px 80px;
+	margin-inline: auto;
+	width: 100%;
+	min-width: 300px;
+	max-width: 1920px;
+
+	.footer-section-1 {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		align-items: flex-start;
+		justify-content: space-between;
+		position: relative;
+
+		.logo-footer {
+			width: 500px;
+			height: 202px;
+		}
+
+		.uls {
+			position: relative;
+			margin-top: 40px;
+			display: flex;
+			min-width: 800px;
+			max-width: 1062px;
+			width: 100%;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			.ul-con {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 15px;
+				h2 {
+					color: $dark;
+					font-family: 'Exo 2';
+					font-size: 40px;
+					font-weight: 700;
+				}
+				ul {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 15px;
+					list-style-type: none;
+					li {
+						a {
+							text-decoration: none;
+							color: currentColor;
+						}
+						color: $dark;
+						font-family: 'SF Pro Text';
+						font-size: 24px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+	hr {
+		margin-top: 135px;
+		background-color: $dark;
+		margin-bottom: 30px;
+	}
+	.footer-section-2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		p {
+			color: #000;
+			font-family: 'SF Pro Text';
+			font-size: 20px;
+		}
+		.copyright {
+			width: 100%;
+			max-width: 457px;
+			min-width: 300px;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	main {
+		max-width: 1440px;
+		.hero-con {
+			height: 740px;
+			padding: 30px;
+			.header {
+				height: 72px;
+				.logo {
+					width: 162px;
+					height: 65px;
+				}
+				.nav ul {
+					gap: 50px;
+				}
+				.sign-btn {
+				}
+			}
+			.title {
+				font-size: 58px;
+				line-height: 58px;
+
+				.dspnone-1 {
+					display: inline-block;
+				}
+				.dspnone-2 {
+					display: none;
+				}
+			}
+			.text {
+				font-size: 18px;
+				line-height: 24px;
+				max-width: 730px;
+				margin-top: 40px;
+			}
+		}
+		.about-us {
+			.info {
+				height: 360px;
+				.info-text {
+					font-size: 24px;
+					min-width: 725px;
+				}
+			}
+			.row {
+				.col-6 {
+					height: 360px;
+					width: 50%;
+					img {
+						transform: scaleX(-1);
+					}
+				}
+				.card {
+					height: 360px;
+					padding: 42px 30px;
+					gap: 20px;
+					.subtitle {
+						font-size: 25px;
+						max-width: 265px;
+					}
+					.training {
+						font-size: 18px;
+						line-height: 25px;
+						max-width: 470px;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		max-width: 1440px;
+		.footer-section-1 {
+			.logo-footer {
+				width: 375px;
+				height: 150px;
+			}
+
+			.uls {
+				margin-top: 30px;
+				min-width: 700px;
+				max-width: 800px;
+				.ul-con {
+					h2 {
+						font-size: 30px;
+					}
+					ul {
+						li {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+		hr {
+			margin-top: 100px;
+			background-color: $dark;
+			margin-bottom: 25px;
+		}
+		.footer-section-2 {
+			p {
+				font-size: 15px;
+			}
+			.copyright {
+				width: 100%;
+				max-width: 342px;
+				min-width: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	main {
+		max-width: 1024px;
+		.hero-con {
+			height: 625px;
+			padding: 25px;
+			.header {
+				height: 65px;
+				.logo {
+					width: 125px;
+					height: 55px;
+				}
+				.nav ul {
+					gap: 40px;
+					li {
+						font-family: 'Helvetica Neue';
+					}
+				}
+				.sign-btn {
+					padding: 7px 16px;
+					width: 125px;
+					height: 35px;
+				}
+			}
+			.title {
+				font-size: 40px;
+				line-height: 40px;
+				max-width: 578px;
+				.dspnone-1 {
+					display: inline-block;
+				}
+				.dspnone-2 {
+					display: inline-block;
+				}
+			}
+			.text {
+				font-size: 18px;
+				line-height: 24px;
+				max-width: 730px;
+				margin-top: 40px;
+			}
+		}
+		.about-us {
+			margin-top: 132px;
+			.title {
+				font-size: 48px;
+				line-height: 48px;
+			}
+			.info {
+				height: 240px;
+				align-items: center;
+
+				.info-text {
+					font-size: 20px;
+					min-width: 500px;
+				}
+			}
+			.row {
+				.col-6 {
+					height: 240px;
+					width: 50%;
+					img {
+						transform: scaleX(-1);
+					}
+				}
+				.card {
+					height: 240px;
+					padding: 27px 20px;
+					gap: 18px;
+					.subtitle {
+						font-size: 18px;
+						max-width: 176px;
+					}
+					.training {
+						font-size: 12px;
+						line-height: 16px;
+						max-width: 315px;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		max-width: 1024px;
+		.footer-section-1 {
+			flex-direction: column;
+			.logo-footer {
+				width: 308px;
+				height: 124px;
+			}
+
+			.uls {
+				margin-top: 30px;
+				min-width: 700px;
+				max-width: 800px;
+				.ul-con {
+					h2 {
+						font-size: 30px;
+					}
+					ul {
+						li {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+		hr {
+			margin-top: 100px;
+			background-color: $dark;
+			margin-bottom: 25px;
+		}
+		.footer-section-2 {
+			p {
+				font-size: 15px;
+			}
+			.copyright {
+				width: 100%;
+				max-width: 342px;
+				min-width: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	main {
+		max-width: 768px;
+		padding: 40px;
+
+		.hero-con {
+			padding: 20px;
+
+			.header {
+				.logo {
+					width: 110px;
+					height: auto;
+				}
+
+				.nav {
+					display: none;
+				}
+
+				.burger-menu {
+					display: block;
+					width: 30px;
+					height: 22px;
+					cursor: pointer;
+					position: relative;
+
+					span {
+						display: block;
+						height: 3px;
+						width: 100%;
+						background: black;
+						margin-bottom: 5px;
+						transition: 0.3s;
+					}
+				}
+
+				.sign-btn {
+					display: none;
+				}
+			}
+
+			.title {
+				margin-top: 100px;
+				font-size: 32px;
+				line-height: 36px;
+				max-width: 500px;
+
+				.dspnone-1,
+				.dspnone-2 {
+					display: inline-block;
+				}
+			}
+
+			.text {
+				font-size: 16px;
+				line-height: 22px;
+				max-width: 90%;
+				margin-top: 30px;
+			}
+		}
+
+		.about-us {
+			margin-top: 78px;
+
+			.title {
+				font-size: 36px;
+				line-height: 42px;
+			}
+
+			.info {
+				flex-direction: column;
+				padding: 30px;
+				align-items: flex-start;
+
+				.info-text {
+					font-size: 18px;
+					min-width: 300px;
+					width: 100%;
+				}
+			}
+
+			.row {
+				flex-direction: column;
+				gap: 20px;
+				margin-top: 30px;
+
+				.col-6 {
+					width: 100%;
+					height: auto;
+
+					img {
+						width: 100%;
+						height: auto;
+						transform: scaleX(-1);
+					}
+				}
+
+				.card {
+					width: 100%;
+					height: auto;
+					padding: 20px;
+					gap: 15px;
+
+					.subtitle {
+						font-size: 20px;
+						max-width: 300px;
+					}
+
+					.training {
+						font-size: 16px;
+						max-width: 550px;
+						line-height: 18px;
+					}
+				}
+			}
+			.reverse {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+
+	.footer {
+		max-width: 768px;
+		padding: 40px;
+		.footer-section-1 {
+			gap: 20px;
+
+			.logo-footer {
+				width: 230px;
+				height: auto;
+			}
+
+			.uls {
+				min-width: 500px;
+				max-width: 100%;
+				gap: 20px;
+				justify-content: space-around;
+
+				.ul-con {
+					h2 {
+						font-size: 24px;
+					}
+
+					ul {
+						li {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		hr {
+			margin-top: 60px;
+			margin-bottom: 20px;
+		}
+
+		.footer-section-2 {
+			p {
+				font-size: 14px;
+			}
+
+			.copyright {
+				width: 100%;
+				max-width: 300px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	main {
+		width: 100vw;
+		padding: 0px;
+		.hero-con {
+			padding: 20px;
+			width: 100vw;
+			height: 100dvh;
+			border-radius: 0px;
+			align-items: center;
+			.header {
+				margin-top: 60px;
+				height: 50px;
+				.logo {
+					width: 110px;
+					height: auto;
+				}
+
+				.nav {
+					display: none;
+				}
+
+				.burger-menu {
+					display: block;
+					width: 30px;
+					height: 22px;
+					cursor: pointer;
+					position: relative;
+
+					span {
+						display: block;
+						height: 3px;
+						width: 100%;
+						background: black;
+						margin-bottom: 5px;
+						transition: 0.3s;
+					}
+				}
+
+				.sign-btn {
+					display: none;
+				}
+			}
+
+			.title {
+				margin-top: 140px;
+				font-size: 25px;
+				line-height: 30px;
+				width: 95%;
+				font-family: 'Exo 2';
+
+				.dspnone-1,
+				.dspnone-2 {
+					display: inline-block;
+				}
+			}
+
+			.text {
+				font-size: 18px;
+				line-height: 24px;
+				width: 100%;
+				margin-top: 30px;
+			}
+		}
+
+		.about-us {
+			margin-top: 78px;
+			padding: 15px;
+
+			.title {
+				font-size: 36px;
+				line-height: 42px;
+			}
+
+			.info {
+				flex-direction: column;
+				padding-top: 40px;
+				padding: 20px;
+				height: auto;
+				.info-text {
+					font-size: 18px;
+					min-width: 200px;
+					width: 100%;
+					font-weight: 400;
+					line-height: 18px;
+				}
+			}
+
+			.row {
+				flex-direction: column;
+				gap: 20px;
+				margin-top: 30px;
+
+				.col-6 {
+					width: 100%;
+					height: auto;
+
+					img {
+						width: 100%;
+						height: auto;
+						transform: scaleX(-1);
+					}
+				}
+
+				.card {
+					width: 100%;
+					height: auto;
+					padding: 20px;
+					gap: 15px;
+
+					.subtitle {
+						font-size: 18px;
+						max-width: 220px;
+					}
+
+					.training {
+						font-size: 12px;
+						max-width: 550px;
+						line-height: 16px;
+					}
+				}
+			}
+			.reverse {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+
+	.footer {
+		max-width: 500px;
+		min-width: 300px;
+		padding: 15px;
+		.footer-section-1 {
+			gap: 0px;
+
+			.logo-footer {
+				width: 231px;
+				height: 93px;
+			}
+
+			.uls {
+				min-width: 300px;
+				max-width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				justify-content: space-around;
+
+				.ul-con {
+					h2 {
+						font-size: 28px;
+					}
+
+					ul {
+						gap: 10px;
+						li {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+
+		hr {
+			margin-top: 60px;
+			margin-bottom: 20px;
+		}
+
+		.footer-section-2 {
+			p {
+				font-size: 14px;
+			}
+
+			.copyright {
+				width: 100%;
+				font-size: 20px;
+			}
+			.policy {
+				display: none;
+			}
+		}
+	}
+}
