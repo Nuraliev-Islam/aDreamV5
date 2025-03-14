@@ -1621,6 +1621,28 @@ html {
     }
 }
 
+.over{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 1920px;
+    background-color: #ffffff00;
+    transform: translate(-50%);
+    position: fixed;
+    margin-left: 50%;
+    bottom: -200%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.over2{
+    bottom: -0%;
+}
+
+.none{
+    display: none;
+}
+
 .popup{
     width: 1920px;
     height: 1650px;
@@ -1636,6 +1658,7 @@ html {
     transition: bottom 0.2s linear;
     left: 50%;
     transform: translateX(-50%);
+    overflow-y: auto;
 }
 
 .popup.half-show {
