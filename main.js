@@ -45,6 +45,7 @@ card_btn3.onclick = () => {
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
+    direction: "horizontal",
     slidesPerView: "auto",
     freeMode: true,
     // If we need pagination
@@ -54,7 +55,76 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    
   });
 
 
+  let lastScrollTop = 0;
+  const popup = document.getElementById("popup");
+  const over = document.getElementById("over");
+  const btn = document.getElementById("toggleBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  let bottomOffset = -50; // Начальная позиция (наполовину скрыт)
+  let isVisible = false;  // Флаг для отслеживания состояния
+
+  // Показать / скрыть блок при нажатии на кнопку
+  btn.addEventListener("click", () => {
+      if (!isVisible) {
+          // popup.classList.add("half-show");
+          // isVisible = true;
+          bottomOffset = -1200;
+          popup.style.bottom = bottomOffset + "px";
+          document.body.style.overflow = "hidden";
+          document.getElementById('over').style.overflow = "auto";
+          over.classList.add("over2")
+      }
+  });
+
+  closeBtn.onclick = () => {
+      over.classList.remove('over2')
+      document.body.style.overflowY = "auto";
+      over.classList.remove('over2')
+  }
+
+  // over.onclick = () => {
+  //     over.classList.remove('over2')
+  //     document.body.style.overflowY = "auto";
+  // }
+
+  // Обработчик скролла
+  window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (isVisible) {
+          if (scrollTop < lastScrollTop) {
+              // Скролл вверх – поднимаем блок постепенно, но не выше 50px
+              bottomOffset += 5;
+              if (bottomOffset > 30) bottomOffset = 10;
+              popup.style.bottom = bottomOffset + "px";
+          } else {
+              // Скролл вниз – опускаем обратно, но не ниже -50px
+              bottomOffset -= 5;
+              if (bottomOffset < -1200) bottomOffset = -1200;
+              popup.style.bottom = bottomOffset + "px";
+          }
+      }
+
+      lastScrollTop = scrollTop;
+  });
+
+
+
+  function removeClasses() {
+    if (window.innerWidth <= 399) {
+      document.querySelectorAll('.swiper, .swiper-wrapper').forEach(el => {
+        el.classList.remove('класс1', 'класс2'); // Удаляем классы
+      });
+    }
+  }
+
+  // Вызываем функцию при загрузке страницы
+  window.addEventListener('load', removeClasses);
   
+  // Вызываем функцию при изменении размера окна
+  window.addEventListener('resize', removeClasses);
